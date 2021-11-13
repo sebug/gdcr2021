@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace GameOfLife
@@ -42,6 +43,14 @@ namespace GameOfLife
             get
             {
                 return isAlive;
+            }
+        }
+
+        public int AliveNeighborCount
+        {
+            get
+            {
+                return this.Neighbors.Where(c => c.IsAlive).Count();
             }
         }
     }

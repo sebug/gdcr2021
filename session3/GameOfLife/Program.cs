@@ -10,6 +10,7 @@ namespace GameOfLife
             ACellCanBeDead();
             ACellCanBeAlive();
             ACellCanHaveNeighbors();
+            ACellCanHaveAliveNeighbors();
         }
 
         private static void ACellCanBeDead()
@@ -32,6 +33,16 @@ namespace GameOfLife
             cell1.AddNeighbor(cell2);
 
             Debug.Assert(cell1.NeighborCount > 0);
+        }
+
+        private static void ACellCanHaveAliveNeighbors()
+        {
+            var cell1 = new Cell(true);
+            var cell2 = new Cell(true);
+
+            cell1.AddNeighbor(cell2);
+
+            Debug.Assert(cell1.AliveNeighborCount > 0);
         }
     }
 }
