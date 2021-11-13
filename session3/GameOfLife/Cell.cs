@@ -16,14 +16,6 @@ namespace GameOfLife
 
         private List<Cell> Neighbors { get; } = new List<Cell>();
 
-        public int NeighborCount
-        {
-            get
-            {
-                return this.Neighbors.Count;
-            }
-        }
-
         public Cell AddNeighbor(Cell otherCell)
         {
             this.Neighbors.Add(otherCell);
