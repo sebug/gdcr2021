@@ -31,7 +31,7 @@ namespace GameOfLife
 
             cell1.AddNeighbor(cell2);
 
-            Debug.Assert(cell1.Neighbors.Count > 0);
+            Debug.Assert(cell1.NeighborCount > 0);
         }
     }
 }

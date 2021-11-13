@@ -13,7 +13,15 @@ namespace GameOfLife
             this.isAlive = isAlive;
         }
 
-        public List<Cell> Neighbors { get; } = new List<Cell>();
+        private List<Cell> Neighbors { get; } = new List<Cell>();
+
+        public int NeighborCount
+        {
+            get
+            {
+                return this.Neighbors.Count;
+            }
+        }
 
         public Cell AddNeighbor(Cell otherCell)
         {
