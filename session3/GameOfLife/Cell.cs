@@ -3,20 +3,28 @@ namespace GameOfLife
 {
     public class Cell
     {
+
+        private bool isAlive;
+
         public Cell(bool isAlive)
         {
             this.isAlive = isAlive;
         }
 
-        private bool isAlive = false;
-        internal bool IsDead()
+        internal bool IsDead
         {
-            return !isAlive;
+            get
+            {
+                return !isAlive;
+            }
         }
 
-        internal bool IsAlive()
+        internal bool IsAlive
         {
-            return isAlive;
+            get
+            {
+                return isAlive;
+            }
         }
     }
 }

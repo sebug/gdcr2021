@@ -14,13 +14,13 @@ namespace GameOfLife
         private static void ACellCanBeDead()
         {
             var cell = new Cell(false);
-            Debug.Assert(cell.IsDead());
+            Debug.Assert(cell.IsDead);
         }
 
         private static void ACellCanBeAlive()
         {
             var cell = new Cell(true);
-            Debug.Assert(cell.IsAlive());
+            Debug.Assert(cell.IsAlive);
         }
     }
 }
