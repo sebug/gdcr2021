@@ -16,14 +16,14 @@ namespace GameOfLife
 
         private static void ACellCanBeAlive()
         {
-            var cell = new Cell(true);
+            var cell = new Cell();
             Debug.Assert(cell.IsAlive);
         }
 
         private static void ACellCanHaveAliveNeighbors()
         {
-            var cell1 = new Cell(true);
-            var cell2 = new Cell(true);
+            var cell1 = new Cell();
+            var cell2 = new Cell();
 
             cell1.AddNeighbor(cell2);
 
@@ -32,8 +32,8 @@ namespace GameOfLife
 
         private static void NeighborsGoBothWays()
         {
-            var cell1 = new Cell(true);
-            var cell2 = new Cell(true);
+            var cell1 = new Cell();
+            var cell2 = new Cell();
 
             cell1.AddNeighbor(cell2);
 
@@ -42,8 +42,8 @@ namespace GameOfLife
 
         private static void NeighborsCountOnce()
         {
-            var cell1 = new Cell(true);
-            var cell2 = new Cell(true);
+            var cell1 = new Cell();
+            var cell2 = new Cell();
 
             cell1.AddNeighbor(cell2);
             cell1.AddNeighbor(cell2);
@@ -53,7 +53,7 @@ namespace GameOfLife
 
         private static void CantBeMyOwnNeighbor()
         {
-            var cell1 = new Cell(true);
+            var cell1 = new Cell();
 
             cell1.AddNeighbor(cell1);
 

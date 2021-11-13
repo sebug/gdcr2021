@@ -9,9 +9,9 @@ namespace GameOfLife
 
         private bool isAlive;
 
-        public Cell(bool isAlive)
+        public Cell()
         {
-            this.isAlive = isAlive;
+            this.isAlive = true;
         }
 
         private List<Cell> Neighbors { get; } = new List<Cell>();
