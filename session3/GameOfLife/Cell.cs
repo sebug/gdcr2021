@@ -18,6 +18,10 @@ namespace GameOfLife
 
         public Cell AddNeighbor(Cell otherCell)
         {
+            if (this == otherCell)
+            {
+                return this;
+            }
             if (!this.Neighbors.Contains(otherCell))
             {
                 this.Neighbors.Add(otherCell);
