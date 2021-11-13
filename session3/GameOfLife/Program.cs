@@ -7,18 +7,11 @@ namespace GameOfLife
     {
         static void Main(string[] args)
         {
-            ACellCanBeDead();
             ACellCanBeAlive();
             ACellCanHaveAliveNeighbors();
             NeighborsGoBothWays();
             NeighborsCountOnce();
             CantBeMyOwnNeighbor();
-        }
-
-        private static void ACellCanBeDead()
-        {
-            var cell = new Cell(false);
-            Debug.Assert(cell.IsDead);
         }
 
         private static void ACellCanBeAlive()
