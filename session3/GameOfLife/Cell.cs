@@ -7,11 +7,9 @@ namespace GameOfLife
     public class Cell
     {
 
-        private bool isAlive;
 
         public Cell()
         {
-            this.isAlive = true;
         }
 
         private List<Cell> Neighbors { get; } = new List<Cell>();
@@ -30,19 +28,12 @@ namespace GameOfLife
             return this;
         }
 
-        internal bool IsDead
-        {
-            get
-            {
-                return !isAlive;
-            }
-        }
 
         internal bool IsAlive
         {
             get
             {
-                return isAlive;
+                return true;
             }
         }
 
