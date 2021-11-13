@@ -19,6 +19,7 @@ namespace GameOfLife
         public Cell AddNeighbor(Cell otherCell)
         {
             this.Neighbors.Add(otherCell);
+            otherCell.Neighbors.Add(this);
             return this;
         }
 
