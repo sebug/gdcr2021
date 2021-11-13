@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace GameOfLife
 {
     public class Cell
@@ -9,6 +11,14 @@ namespace GameOfLife
         public Cell(bool isAlive)
         {
             this.isAlive = isAlive;
+        }
+
+        public List<Cell> Neighbors { get; } = new List<Cell>();
+
+        public Cell AddNeighbor(Cell otherCell)
+        {
+            this.Neighbors.Add(otherCell);
+            return this;
         }
 
         internal bool IsDead
