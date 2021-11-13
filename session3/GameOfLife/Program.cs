@@ -7,6 +7,11 @@ namespace GameOfLife
     {
         static void Main(string[] args)
         {
+            ACellCanBeDead();
+        }
+
+        private static void ACellCanBeDead()
+        {
             var cell = new Cell();
             Debug.Assert(cell.IsDead());
         }

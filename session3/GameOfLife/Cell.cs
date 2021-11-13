@@ -3,13 +3,10 @@ namespace GameOfLife
 {
     public class Cell
     {
-        public Cell()
-        {
-        }
-
+        private bool isAlive = false;
         internal bool IsDead()
         {
-            return true;
+            return !isAlive;
         }
     }
 }
